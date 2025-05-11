@@ -171,4 +171,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HardSpeed: 6
   EasySpeed: 3
-  Hard: 0
+  Hard: 1

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HardSpeed: 6
   EasySpeed: 3
-  Hard: 0
+  Hard: 1
 --- !u!1 &4013528124613368544
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AlertScript : MonoBehaviour
@@ -5,12 +6,14 @@ public class AlertScript : MonoBehaviour
     private static TMPro.TextMeshProUGUI title;
     private static TMPro.TextMeshProUGUI message;
     private static TMPro.TextMeshProUGUI button;
+    private static Action action;
     private static GameObject content;
-    public static void Show(string title, string message, string actionButton = "Close")
+    public static void Show(string title, string message, string actionButton = "Close", Action action = null)
     {
         AlertScript.title.text = title;
         AlertScript.message.text = message;
         AlertScript.button.text = actionButton;
+        AlertScript.action = action;
         content.SetActive(true);
         Time.timeScale = 0.0f;
     }
@@ -36,5 +39,9 @@ public class AlertScript : MonoBehaviour
     {
         content.SetActive(false);
         Time.timeScale = 1.0f;
+        if (action != null)
+        {
+            action();
+        }
     }
 }
