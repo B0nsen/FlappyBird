@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pipe
   - Food
+  - Food2
   layers:
   - Default
   - TransparentFX
